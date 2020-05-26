@@ -5,8 +5,9 @@
     <title>Counter</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Roboto+Condensed:300,400,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Roboto+Condensed:300,400,700&display=swap" rel="stylesheet" /> -->
+    <!-- <link rel="stylesheet" href="./src/css/counterStyles.css" /> -->
+    <link rel="stylesheet" href="./src/css/calculatorStyles.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./src/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./src/img/favicon-16x16.png">
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <!-- <div class="wrap">
         <p class="js-counter">0</p>
         <div class="wrapBtn">
             <button class="btn" data-action="decrement">
@@ -27,8 +28,46 @@
           </button>
 
         </div>
+    </div> -->
+    <div class="calc">
+        <form id="calculator">
+            <h2>calculator</h2>
+            <section id="display">
+                <input type="text" id="history" value="" disabled />
+                <output name="result" id="result" for="history">0</output>
+            </section>
+            <h2>calculator options</h2>
+            <section id="keypad">
+                <!-- first line -->
+                <input type="button" data-reset="reset" value="C" />
+                <input type="button" data-backspace="backspace" value="&#8676;" />
+                <input type="button" data-persent="%" value="%" />
+                <input type="button" data-operator="/" class="operator" value="&#247;" />
+                <!-- second line -->
+                <input type="button" data-number="seven" value="7" />
+                <input type="button" data-number="eight" value="8" />
+                <input type="button" data-number="nine" value="9" />
+                <input type="button" data-operator="*" class="operator" value="&#215;" />
+                <!-- third line -->
+                <input type="button" data-number="four" value="4" />
+                <input type="button" data-number="five" value="5" />
+                <input type="button" data-number="six" value="6" />
+                <input type="button" data-operator="-" class="operator" value="&#8722;" />
+                <!-- fourth line -->
+                <input type="button" data-number="one" value="1" />
+                <input type="button" data-number="two" value="2" />
+                <input type="button" data-number="three" value="3" />
+                <input type="button" data-operator="+" class="operator" value="&#43;" />
+                <!-- fifth line -->
+                <input type="button" data-number="zero" value="0" />
+                <input type="button" data-number="dot" value="&sdot;" />
+                <input type="button" data-operator="=" class="operator" value="&#61;" />
+
+            </section>
+        </form>
     </div>
-    <script type="module" src="./src/js/counter.js"></script>
+    <script src="./src/js/calculator.js" type="module"></script>
+    <!-- <script type="module" src="./src/js/counter.js"></script> -->
 </body>
 
 </html>
