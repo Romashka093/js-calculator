@@ -1,1 +1,1 @@
-# [Counter](https://romashka093.github.io/ss-js-counter/)
+# [Calculator](https://romashka093.github.io/ss-js-counter/)

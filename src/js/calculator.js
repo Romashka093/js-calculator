@@ -1,81 +1,67 @@
 'use strict';
-console.warn('CALCULATOR');
+console.warn('Calculator');
 
-const refs = {
-	userInput: document.querySelector('#history'),
-	userOutput: document.querySelector('#result'),
-	// document.querySelector('button[data-action="decrement"]'),
-	numberButtons: document.querySelectorAll('[data-number]'),
-	operatorButtons: document.querySelectorAll('[data-operator]'),
-	reset: document.querySelector('[data-reset]'),
-	backspace: document.querySelector('[data-backspace]'),
-	persent: document.querySelector('[data-persent]')
-};
-
-console.log('refs', refs);
-
-const Calculator = function({ input = 0, output = 0 }) {
-	this.userInput = input;
-	this.userOutput = output;
-	this.inputHistory = [];
-
-	this.reset = function() {
-		this.inputHistory = [];
-		this.updateInputDisplay();
-		this.updateOutputDisplay('0');
-	};
-
-	this.backspace = function() {};
-
-	this.changePercentToDecimal = function() {};
-
-	this.insertNumber = function(value) {};
-
-	this.insertOperation = function(value) {};
-
-	this.negateNumber = function() {};
-
-	this.insertDecimalPoint = function() {};
-
-	this.generateResult = function() {};
-
-	// halpers
-};
-
-const calculator = new Calculator({ userInput: 0, userOutput: 0 });
-
-refs.numberButtons.forEach((button) => {
-	button.addEventListener('click', (evt) => {
-		// console.log('evt.target', evt.target);
-		// console.log('evt.target.value', evt.target.value);
-		// console.log('evt.target.dataset.number :>> ', evt.target.dataset.number);
-		calculator.insertNumber(evt.target.dataset.number);
-		let { target } = evt; // evt.target
-		calculator.insertNumber(target.dataset.number);
-		// console.log(target);
-	});
+calculator.one.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.one.value));
 });
 
-refs.operatorButtons.forEach((button) => {
-	button.addEventListener('click', (evt) => {
-		// console.log('evt.target', evt.target);
-		// console.log('evt.target.value', evt.target.value);
-		// console.log('evt.target.dataset.number :>> ', evt.target.dataset.number);
-		calculator.insertNumber(evt.target.dataset.number);
-		let { target } = evt; // evt.target
-		calculator.insertNumber(target.dataset.number);
-		// console.log(target);
-	});
+calculator.two.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.two.value));
 });
 
-refs.reset.addEventListener('click', () => {
-	calculator.reset();
+calculator.three.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.three.value));
 });
 
-refs.backspace.addEventListener('click', () => {
-	calculator.backspace();
+calculator.four.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.four.value));
 });
 
-refs.persent.addEventListener('click', () => {
-	calculator.changePercentToDecimal();
+calculator.five.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.five.value));
+});
+
+calculator.six.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.six.value));
+});
+
+calculator.seven.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.seven.value));
+});
+
+calculator.eight.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.eight.value));
+});
+
+calculator.nine.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.nine.value));
+});
+
+calculator.zero.addEventListener('click', () => {
+	console.log((calculator.result.value += calculator.zero.value));
+});
+
+calculator.reset.addEventListener('click', () => {
+	console.log((calculator.result.value = ''));
+});
+
+calculator.divide.addEventListener('click', () => {
+	console.log((calculator.result.value += '/'));
+});
+
+calculator.multiply.addEventListener('click', () => {
+	console.log((calculator.result.value += '*'));
+});
+
+calculator.minus.addEventListener('click', () => {
+	console.log((calculator.result.value += '-'));
+});
+
+calculator.plus.addEventListener('click', () => {
+	console.log(typeof calculator.plus.value);
+	console.log((calculator.result.value += calculator.plus.value));
+});
+
+calculator.equal.addEventListener('click', () => {
+	console.log((calculator.result.value = eval(calculator.result.value)));
 });
