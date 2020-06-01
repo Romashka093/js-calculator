@@ -5,9 +5,7 @@
     <title>Calculator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Roboto+Condensed:300,400,700&display=swap" rel="stylesheet" /> -->
-    <!-- <link rel="stylesheet" href="./src/css/counterStyles.css" /> -->
-    <link rel="stylesheet" href="./src/css/calculatorStyles.css" />
+    <link rel="stylesheet" href="./src/styles/calculator.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./src/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./src/img/favicon-16x16.png">
@@ -15,46 +13,34 @@
 </head>
 
 <body>
-    <div class="calc">
-        <form id="calculator">
+    <div class="main-wrap">
+        <form class="calculator" id="calculator">
             <h2>calculator</h2>
+            <input class="result" name="result" type="text" id="history" disabled placeholder='0' />
+            <div class="btn-wrap">
+                <input class="btn number" name="seven" type="button" data-number value="7"></input>
+                <input class="btn number" name="eight" type="button" data-number value="8" />
+                <input class="btn number" name="nine" type="button" data-number value="9" />
+                <input class="btn operator" name="divide" type="button" data-operator class="operator" value="/" />
 
-            <input name="result" type="text" id="history" value="" disabled />
+                <input class="btn number" name="four" type="button" data-number value="4" />
+                <input class="btn number" name="five" type="button" data-number value="5" />
+                <input class="btn number" name="six" type="button" data-number value="6" />
+                <input class="btn operator" name="multiply" type="button" data-operator class="operator" value="*" />
 
+                <input class="btn number" name="one" type="button" data-number value="1" />
+                <input class="btn number" name="two" type="button" data-number value="2" />
+                <input class="btn number" name="three" type="button" data-number value="3" />
+                <input class="btn operator" name="minus" type="button" data-operator class="operator" value="-" />
 
-            <h2>calculator options</h2>
-
-
-
-
-
-            <input name="seven" type="button" data-number="7" value="7"></input>
-            <input name="eight" type="button" data-number="8" value="8" />
-            <input name="nine" type="button" data-number="9" value="9" />
-            <input name="divide" type="button" data-operator="/" class="operator" value="&#247;" />
-
-            <input name="four" type="button" data-number="4" value="4" />
-            <input name="five" type="button" data-number="5" value="5" />
-            <input name="six" type="button" data-number="6" value="6" />
-            <input name="multiply" type="button" data-operator="x" class="operator" value="&#215;" />
-
-            <input name="one" type="button" data-number="1" value="1" />
-            <input name="two" type="button" data-number="2" value="2" />
-            <input name="three" type="button" data-number="3" value="3" />
-            <input name="minus" type="button" data-operator="-" class="operator" value="&#8722;" />
-
-            <input name="reset" type="button" data-reset="reset" value="C" />
-            <input name="zero" type="button" data-number="0" value="0" />
-            <input name="equal" type="button" data-operator="equal" class="operator" value="&#61;" />
-            <input name="plus" type="button" data-operator="+" class="operator" value="&#43;" />
-
-
+                <input class="btn operator" name="reset" type="button" data-reset="reset" value="C" />
+                <input class="btn number" name="zero" type="button" data-number value="0" />
+                <input class="btn operator" name="plus" type="button" data-operator class="operator" value="+" />
+                <input class="btn operator" name="equal" type="button" data-equal="equal" class="operator" value="=" />
+            </div>
         </form>
     </div>
-
-
     <script src="./src/js/calculator.js" type="module"></script>
-    <!-- <script type="module" src="./src/js/counter.js"></script> -->
 </body>
 
 </html>
